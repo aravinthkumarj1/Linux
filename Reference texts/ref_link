@@ -1,0 +1,2 @@
+HDMI-IOMUX
+https://github.com/Freescale/meta-fsl-arm-extra/blob/master/recipes-kernel/linux/linux-compulab-3.14.28/0057-ARM-dts-cm-fx6-fix-missing-defines.patch
