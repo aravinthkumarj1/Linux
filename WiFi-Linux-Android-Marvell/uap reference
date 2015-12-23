@@ -1,0 +1,43 @@
+Wifi testing Process
+
+./uaputl.exe bss_stop
+
+./uaputl.exe sys_cfg_auth 0                // AUTH Open
+
+./uaputl.exe sys_cfg_protocol 8            //Auth WPA
+
+./uaputl.exe sys_cfg_cipher 4 4            // TKIP - cipher
+
+
+
+ ./uaputl.exe sys_cfg_pwk_cipher 32 8      // WPA2 AES
+
+ ./uaputl.exe sys_cfg_protocol             // WPA2 PSK   ** we can't change PSK
+
+./uaputl.exe sys_cfg_wpa_passphrase 1234567890  // wpa/wpa2 passphrase
+
+        ./uaputl.exe sys_cfg_cipher 4 4         // Set AP's pairwise and group key's type to TKIP.
+
+ ./uaputl.exe sys_cfg_2040_coex 1               // enable 20/40MHz coexistence
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+COnfiguration format 
+ ./uaputl.exe sys_cfg_11n 1 0x111e
+./uaputl.exe sys_cfg_protocol 40
+./uaputl.exe sys_cfg_cipher 8 8
+./uaputl.exe sys_cfg_wpa_passphrase 1234567890
+./uaputl.exe bss_start
+./uaputl.exe bss_stop
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+ERROR:-
+
+ERR: WEP cannot be used when AP operates in 802.11n mode.
+ERR: Wrong system configuration!
+
+ERR:uAP must be configured to operate in 40MHz if rate_bitmap contains MCS32
+ERR: Wrong system configuration!
+
+

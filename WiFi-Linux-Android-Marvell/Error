@@ -1,0 +1,67 @@
+ERROR:-
+
+ERR:uAP must be configured to operate in 40MHz if rate_bitmap contains MCS32
+
+
+./uaputl.exe txratecfg 12 
+Invalid user_data_cnt
+ERR:UAP_IOCTL_CMD fail
+
+
+./uaputl.exe txratecfg MCS0 12
+ERR:wrong arguments! Only 1 or 0 arguments are supported
+
+
+./uaputl.exe txratecfg MCS0   
+ERR: invalid Tx data rate
+
+
+./uaputl.exe txratecfg 1 3
+ERR:wrong arguments! Only 1 or 0 arguments are supported.
+
+
+./uaputl.exe sys_cfg_11n 0 0x111e
+ERR:wrong arguments.
+
+
+
+
+
+////////////////////////////////////////////////////////////
+
+ERR:uAP must be configured to operate in 40MHz if rate_bitmap contains MCS32
+
+
+ERR:Secondary channel should be set when 40Mhz is enabled!
+
+
+ERR:Could not set wifidirect parameters
+
+
+
+./wifidirect/start_auto_go.sh 
+wfd0 Mac address updated in config/wifidirect.conf
+CMD_RESP: cmd 0xb0 error, result=0x1
+IOCTL failed: 984db000 id=0x200000, sub_id=0x20000f action=1, status_code=0x1
+ioctl[CUSTOM_IE]: Bad address
+Failed to set/get/clear the IE buffer
+ERR:Could not set wifidirect parameters
+Interface doesn't accept private ioctl...
+bssrole (8BE5): Invalid argument
+dev_name:wfd0
+wfd0      bssrole:0  
+
+
+Wifidirect Device Mode = Device
+wfd0      bssrole:1  
+Wifidirect Device Mode = Wifidirect Group Owner (GO)
+dev_name:wfd0
+ERR:Secondary channel should be set when 40Mhz is enabled!
+ERR: Wrong system configuration!
+
+
+/////////////////////////////////
+
+ERR:Config file can not open.
+
+./wifidirectutl wfd0 wifidirect_params_config uaputil_wifidirect.conf

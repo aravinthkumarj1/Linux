@@ -1,0 +1,39 @@
+Configure:-
+
+root@iWave-G15 /Install-zn/bin# ./uaputl.exe sys_cfg_11n 1 0x115c
+Configure 802.11n parameters successful
+root@iWave-G15 /Install-zn/bin# 
+root@iWave-G15 /Install-zn/bin# ./uaputl.exe sys_cfg_11n
+
+HT Capability Info: 
+802.11n is enabled
+ht_cap_info=0x115c, ampdu_param=0x3 tx_bf_cap=0
+supported MCS set:
+0xff 0x0 0x0 0x0 0x1 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 
+
+HT Information Element: 
+Primary channel = 0
+Secondary channel offset = 0
+STA channel width = 20MHz
+RIFS  Allowed
+HT Protection = 0
+Non-Greenfield HT STAs present: No
+OBSS Non-HT STAs present: No
+root@iWave-G15 /Install-zn/bin# 
+/////////////////////////////////////////////////////////////////////
+./uaputl.exe sys_cfg_11n
+HT Capability Info: 
+802.11n is enabled
+ht_cap_info=0x111c, ampdu_param=0x3 tx_bf_cap=0
+supported MCS set:
+0xff 0x0 0x0 0x0 0x1 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 
+
+HT Information Element: 
+Primary channel = 0
+Secondary channel offset = 0
+STA channel width = 20MHz
+RIFS  Allowed
+HT Protection = 0
+Non-Greenfield HT STAs present: No
+OBSS Non-HT STAs present: No
+

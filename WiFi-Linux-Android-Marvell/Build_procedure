@@ -1,0 +1,80 @@
+Build the u-boot image
+
+Export arm to ARCH
+#export ARCH=arm 
+
+Export freescale path to PATH
+#export PATH=$PATH:/opt/freescale/usr/local/gcc-4.6.2-glibc-2.13-linaro-multilib-2011.12/fsl-linaro-toolchain/bin 
+
+Export Cross compiler path
+#export CROSS_COMPILE=arm-none-linux-gnueabi- 
+
+#make
+
+
+[Do the kernel patch]
+
+
+Build the kernel image
+
+Export arm to ARCH
+export ARCH=arm 
+
+Export freescale path to PATH
+export PATH=$PATH:/opt/freescale/usr/local/gcc-4.6.2-glibc-2.13-linaro-multilib-2011.12/fsl-linaro-toolchain/bin 
+
+Export Cross compiler path
+export CROSS_COMPILE=arm-none-linux-gnueabi-
+
+Build Defconfig using below command
+make imx6s_defconfig 
+
+Changes in kernel need to be done using make menuconfig comman as follows
+make menuconfig 
+options:------------------------------------------------------------------------ 
+
+Run make menuconfig from a directory where your kernel sources are present. check below following menu tweak order in your GUI: 
+
+#make menuconfig
+
+/*** System Type → 
+       TI DaVinci Implementations → 
+          [*] Enable UART1 flow control  ****//// 
+
+Device drivers → 
+    <*> Sound card support → 
+        <*> Advanced Linux Sound Architechture  → 
+            <*> Alsa for SoC audio support  → 
+                < > SoC Audio support for DA850/OMAP-L138/AM18xx EVM 
+Library routines → 
+    {*} CRC16 functions 
+Networking support → 
+    <*> RF switch subsystem support 
+Device drivers → 
+    [*] Misc Devices → 
+        Texas Instruments shared transport line discipline → 
+            <M> Shared transport core driver 
+Device drivers → 
+    [*] HID Devices 
+Networking support → 
+    < > Bluetooth subsystem support → 
+        [This disables the option to build Bluetooth as part of a kernel] 
+Device drivers → 
+    [*] Staging drivers → 
+        [ ] Exclude Staging drivers from being built 
+            Texas Instruments shared transport line discipline → 
+                <M> BlueZ bluetooth driver for ST 
+Device drivers → 
+    Generic Driver Options → 
+        {*} Userspace firmware loading support 
+        
+-------------------------------------------------------------------------------------------------- 
+After checking the GUI need to build kernel image (uImage), Procedure to build uImage: 
+
+#make -j4
+#make uImage 
+
+
+
+
+

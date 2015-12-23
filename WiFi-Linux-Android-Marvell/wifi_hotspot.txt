@@ -1,0 +1,94 @@
+Create Virtual WIFI:-
+
+hostapd is for access points, wpa_supplicant is for stations.
+
+So start work in hostapd....
+
+
+# killall wpa_supplicant
+
+
+# echo 1 > /proc/sys/net/ipv4/ip_forward
+
+
+# ifconfig uap0 192.168.10.2            // this ip value taken from  /etc/udhcpd.conf   "router  192.168.10.2"
+ 
+
+# hostapd -B /etc/hostapd.conf -P /var/run/hostapd.pid
+
+//////////////////////////////////////////////
+
+Configuration file: /etc/hostapd.conf
+nl80211 driver initialization failed.
+
+//////////////////////////////////////////////
+
+# udhcpd /etc/udhcpd.conf
+
+
+# iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+
+ieee80211n=1
+
+driver=nl80211
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+./uaputl.exe bss_stop
+
+./uaputl.exe sys_cfg_11n 1 0x115e    // set STA_CHANNEL width 40Mhz
+./uaputl.exe bss_start
+
+
+
+./uaputl.exe sys_config config/uaputl.conf
+
+
+To load driver in uAP only mode,
+                insmod mlan.ko
+                insmod sd8787.ko drv_mode=2
+
+sys_config
+----------
+    "./uaputl.exe sys_config [CONFIG_FILE]"
+
+./uaputl.exe sys_config config/uaputl.conf
+
+
+///////////////////////////////
+
+interface=wlan0
+driver=nl80211
+country_code=FR
+ssid=MY_AP
+hw_mode=g
+channel=6
+wpa=2
+wpa_passphrase=mypassphrase12345678
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+
+
+
+hostapd -dd /etc/hostapd/hostapd.conf
+
+///////////////////////////////////////////////////////////////////////////
+
+root@iWave-G15 /# hostapd -B /etc/hostapd.conf -P /var/run/hostapd.pid
+Configuration file: /etc/hostapd.conf
+Line 8: unknown configuration item 'ieee80211n'
+1 errors found in configuration file '/etc/hostapd.conf'
+Failed to set up interface with /etc/hostapd.conf
+Failed to initialize interface
+root@iWave-G15 /# 
+
+////////////////////////////////////////////////////////////////////////////
+

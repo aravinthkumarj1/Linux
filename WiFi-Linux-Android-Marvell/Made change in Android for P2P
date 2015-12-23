@@ -1,0 +1,3 @@
+Made change in Android for P2P
+
+~/Project/source_kitkat/external/wpa_supplicant_8/hostapd$ vim Android.mk 

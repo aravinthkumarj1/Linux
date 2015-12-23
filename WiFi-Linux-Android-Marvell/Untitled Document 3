@@ -1,0 +1,23 @@
+WE can't change:-
+
+./uaputl.exe txratecfg
+./uaputl.exe sys_cfg_protocol [PROTOCOL] [AKM_SUITE]
+
+////////////////////////////
+
+./uaputl.exe sys_cfg_rates 0x82 0x84 0x8b 0x96
+
+iwpriv mlan0 htcapinfo 0x5820000
+iwpriv mlan0 httxcfg 0x62
+iwconfig mlan0 essid Annoor1
+ifconfig mlan0 192.168.0.111
+iwpriv mlan0 reassoctrl 1
+iwpriv mlan0 txratecfg 19
+
+//////////////////////////////////
+
+./uaputl.exe bss_stop
+./uaputl.exe sys_cfg_11n 1 0x116e 3
+./uaputl.exe sys_cfg_channel 6 2
+./uaputl.exe sys_cfg_2040_coex 0
+./uaputl.exe bss_start

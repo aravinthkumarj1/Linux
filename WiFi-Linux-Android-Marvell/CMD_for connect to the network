@@ -1,0 +1,21 @@
+#iwpriv mlan0 aggrpriotbl 2 2 0 0 1 1 3 3 4 4 5 5 6 6 7 7 
+
+#iwpriv mlan0 addbapara 0 64 64 1 1 
+
+#iwpriv mlan0 httxcfg 0x62
+
+#iwpriv mlan0 htcapinfo 0x1820000
+
+#iwpriv mlan0 passphrase "1;passphrase=znkb10062013"
+
+#iwconfig mlan0 essid "Annoor1"
+
+#udhcpc -i mlan0
+
+//////////////////////////////////////////////
+
+iwpriv mlan0 deepsleep
+
+iwpriv mlan0 sdioclock 0
+
+./wlanconfig mlan0 setuserscan 100 100

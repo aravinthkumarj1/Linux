@@ -1,0 +1,131 @@
+
+W/AudioTrack(  410): AUDIO_OUTPUT_FLAG_FAST denied by client due to mismatching sample rate (48000 vs 44100)
+I/audio_hw_primary(  124): start_output_stream... 2019002280, device 2
+D/WifiService(  410): setWifiEnabled: false pid=698, uid=1000
+W/audio_hw_primary(  124): card 0, port 0 device 0x2
+W/audio_hw_primary(  124): rate 44100, channel 2 period_size 0xc0
+I/wpa_supplicant( 1369): [CTRL_IFACE]wlan0: SET ps 1
+I/wpa_supplicant( 1369): [CTRL_IFACE]wlan0: DRIVER BTCOEXMODE 2
+E/wpa_supplicant( 1369): wpa_driver_nl80211_driver_cmd: failed to issue private commands
+D/CommandListener(  119): Clearing all IP addresses on wlan0
+D/ConnectivityService(  410): ConnectivityChange for WIFI: DISCONNECTED/DISCONNECTED
+D/ConnectivityService(  410): tryFailover: set mActiveDefaultNetwork=-1, prevNetType=1
+D/ConnectivityService(  410): Attempting to switch to mobile
+D/ConnectivityService(  410): Attempting to switch to BLUETOOTH_TETHER
+D/ConnectivityService(  410): Attempting to switch to ETHERNET
+I/wpa_supplicant( 1369): [CTRL_IFACE]wlan0: DRIVER WLS_BATCHING GET
+E/wpa_supplicant( 1369): wpa_driver_nl80211_driver_cmd: failed to issue private commands
+I/Choreographer(  698): Skipped 50 frames!  The application may be doing too much work on its main thread.
+E/WifiStateMachine(  410): Unexpected BatchedScanResults :null
+I/wpa_supplicant( 1369): [CTRL_IFACE]wlan0: DRIVER WLS_BATCHING STOP
+E/wpa_supplicant( 1369): wpa_driver_nl80211_driver_cmd: failed to issue private commands
+I/wpa_supplicant( 1369): [CTRL_IFACE]wlan0: SET ps 1
+D/NetUtils(  410): android_net_utils_resetConnections in env=0x55a4dd80 clazz=0x96900001 iface=wlan0 mask=0x3
+D/ConnectivityService(  410):wlan: Received disassociation request on wlan0
+ resetConnections(wlan0, 3)
+I/wpa_supplicant( 1369): [CTRL_IFACE]wlan0: DRIVER BTCOEXMODE 2
+E/wpa_supplicant( 1369): wpa_driver_nl80211_driver_cmd: failed to issue private commands
+D/CommandListener(  119): Clearing all IP addresses on wlan0
+I/wpa_supplicant( 1369): [CTRL_IFACE_G]TERMINATE
+D/Nat464Xlat(  410): requiresClat: netType=1, hasIPv4Address=false
+D/BluetoothAdapter(  698): 738966536: getState() :  mService = null. Returning STATE_OFF
+D/dalvikvm(  410): GC_CONCURRENT freed 726K, 13% free 5647K/6456K, paused 8ms+5ms, total 145ms
+D/Email   (  771): Insert: content://com.android.email.provider/message
+I/NotifUtils(  771): Validating Notification, mapSize: 1 getAttention: true
+I/NotifUtils(  771): Unseen count doesn't match cursor count.  unseen: 489 cursor count: 404
+I/NotifUtils(  771): Notifications are disabled for this folder; not notifying
+I/NotifUtils(  771): Validating Notification, mapSize: 1 getAttention: true
+I/NotifUtils(  771): validateNotifications - cancelling account 1899033165 / folder -1425292080
+I/NotifUtils(  771): Validating Notification, mapSize: 1 getAttention: true
+I/NotifUtils(  771): Unseen count doesn't match cursor count.  unseen: 489 cursor count: 404
+I/NotifUtils(  771): Notifications are disabled for this folder; not notifying
+I/NotifUtils(  771): Validating Notification, mapSize: 1 getAttention: true
+I/NotifUtils(  771): validateNotifications - cancelling account 1899033165 / folder -1425292080
+cfg80211: Calling CRDA to update world regulatory domain
+I/wpa_supplicant( 1369): wlan0: CTRL-EVENT-DISCONNECTED bssid=3c:1e:04:54:72:f4 reason=3 locally_generated=1
+D/Tethering(  410): InitialState.processMessage what=4
+D/BluetoothAdapter(  698): 738966536: getState() :  mService = null. Returning STATE_OFF
+D/Tethering(  410): sendTetherStateChangedBroadcast 0, 0, 0
+I/wpa_supplicant( 1369): wlan0: CTRL-EVENT-TERMINATING 
+D/BluetoothAdapter(  698): 738966536: getState() :  mService = null. Returning STATE_OFF
+D/dalvikvm(  698): GC_CONCURRENT freed 229K, 16% free 3750K/4456K, paused 4ms+2ms, total 163ms
+D/Email   (  771): Insert: content://com.android.email.provider/message
+W/Netd    (  119): No subsystem found in netlink event
+D/NetlinkEvent(  119): Unexpected netlink message. type=0x11
+SDIO: max_segs=1 max_seg_size=524288
+rx_work=0 cpu_num=1
+WLAN FW already running! Skip FW download
+WLAN FW is active
+fw_cap_info=0xb03, dev_cap_mask=0xffffffff
+D/BluetoothAdapter(  698): 738966536: getState() :  mService = null. Returning STATE_OFF
+D/SoftapController(  119): Softap fwReload - Ok
+D/Tethering(  410): sendTetherStateChangedBroadcast 1, 0, 0
+D/Tethering(  410): InitialState.processMessage what=4
+D/BluetoothAdapter(  698): 738966536: getState() :  mService = null. Returning STATE_OFF
+D/Tethering(  410): sendTetherStateChangedBroadcast 0, 0, 0
+D/SoftapController(  119): SoftAP started successfully
+E/hostapd ( 1415): Configuration IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+file: /data/misc/wifi/hostapd.conf
+I/hostapd ( 1415): rfkill: Cannot open RFKILL control device
+E/hostapd ( 1415): Using interfacwlan: Starting AP
+e wlan0 with hwaddr 00:22:58:6e:b7:10 and ssid "AndroidAP"
+wlan: AP started
+IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+Set AC=3, txop=47 cwmin=3, cwmax=7 aifs=1
+D/BluetoothAdapter(  698): 738966536: getState() :  mService = nuwlan: We don't support AP WMM parameter
+ll. Returning STATE_OFF
+Set AC=2, txop=94 cwmin=7, cwmax=15 aifs=1
+D/Tethering(  410): sendTetherStawlan: We don't support AP WMM parameter
+teChangedBroadcast 1, 0, 0
+Set AC=0, txop=0 cwmin=15, cwmax=63 aifs=3
+wlan: We don't support AP WMM parameter
+Set AC=1, txop=0 cwmin=15, cwmax=1023 aifs=7
+W/audio_hw_primary(  124): do_outwlan: We don't support AP WMM parameter
+_standby... 2019002280
+D/CommandListener(  119): Setting iface cfg
+D/CommandListener(  119): Trying to bring up wlan0
+D/Tethering(  410): Tethering wlan0
+D/Tethering(  410): InitialState.processMessage what=2
+D/Tethering(  410): sendTetherStateChangedBroadcast 0, 0, 0
+D/TetherController(  119): tetherInterface(wlan0)
+D/Tethering(  410): Tethered wlan0
+D/Tethering(  410): sendTetherStateChangedBroadcast 0, 1, 0
+D/Tethering(  410): MasterInitialState.processMessage what=1
+D/TetherController(  119): Setting IP forward enable = 1
+D/TetherController(  119): Starting tethering services
+D/TetherController(  119): Sending update msg to dnsmasq [update_ifaces:wlan0]
+D/TetherController(  119): Tethering services running
+D/TetherController(  119): setDnsForwarders(0 = '8.8.8.8')
+D/TetherController(  119): setDnsForwarders(1 = '8.8.4.4')
+D/TetherController(  119): Sending update msg to dnsmasq [update_dns:8.8.8.8:8.8.4.4]
+D/Tethering(  410): chooseUpstreamType(true), preferredApn =5, got type=-1
+I/dnsmasq ( 1418): started, version 2.51 cachesize 150
+I/dnsmasq ( 1418): compile time options: no-IPv6 GNU-getopt no-DBus no-I18N DHCP no-scripts no-TFTP
+W/dnsmasq ( 1418): warning: no upstream servers configured
+I/dnsmasq ( 1418): DHCP, IP range 192.168.49.2 -- 192.168.49.254, lease time 1h
+I/dnsmasq ( 1418): DHCP, IP range 192.168.48.2 -- 192.168.48.254, lease time 1h
+I/dnsmasq ( 1418): DHCP, IP range 192.168.47.2 -- 192.168.47.254, lease time 1h
+I/dnsmasq ( 1418): DHCP, IP range 192.168.46.2 -- 192.168.46.254, lease time 1h
+I/dnsmasq ( 1418): DHCP, IP range 192.168.45.2 -- 192.168.45.254, lease time 1h
+I/dnsmasq ( 1418): DHCP, IP range 192.168.44.2 -- 192.168.44.254, lease time 1h
+I/dnsmasq ( 1418): DHCP, IP range 192.168.43.2 -- 192.168.43.254, lease time 1h
+I/dnsmasq ( 1418): DHCP, IP range 192.168.42.2 -- 192.168.42.254, lease time 1h
+I/dnsmasq ( 1418): read /etc/hosts - 1 addresses
+D/dnsmasq ( 1418): now still use this interfaces so keep it alive
+D/dnsmasq ( 1418): now still use this interfaces so keep it alive
+I/dnsmasq ( 1418): using nameserver 8.8.4.4#53
+I/dnsmasq ( 1418): using nameserver 8.8.8.8#53
+D/BluetoothAdapter(  698): 738966536: getState() :  mService = null. Returning STATE_OFF
+D/BluetoothAdapter(  698): 738966536: getState() :  mService = null. Returning STATE_OFF
+D/ConnectivityService(  410): special network not available ni=mobile_hipri
+D/Tethering(  410): notifying tethered with iface =null
+D/Tethering(  410): TetheredState.processMessage what=12
+D/Tethering(  410): TetherModeAliveState.processMessage what=3
+D/Tethering(  410): chooseUpstreamType(true), preferredApn =5, got type=-1
+D/CaptivePortalTracker(  410): Disconnected from active network NetworkInfo: type: WIFI[], state: DISCONNECTED/DISCONNECTED, reason: (unspecife
+D/ConnectivityService(  410): setProvNotificationVisible: E visible=false networkType=1 extraInfo=null url=null
+D/Tethering(  410): notifying tethered with iface =null
+D/Tethering(  410): TetheredState.processMessage what=12
+D/ConnectivityService(  410): special network not available ni=mobile_hipri
+D/Email   (  771): Insert: content://com.android.email.provider/message
+

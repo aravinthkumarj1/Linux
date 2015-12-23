@@ -1,0 +1,7 @@
+PREVAS:-
+1) Reason For Auto reboot :-
+		Open /dev/watchdog0 and keep it alive according to the normal Linux watchdog API. If the keep
+		alive signaling fails, the system will be rebooted.
+	Solution:-
+		Write any character into ‘/dev/watchdog’.except "V".
+

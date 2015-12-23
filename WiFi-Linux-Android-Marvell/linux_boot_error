@@ -1,0 +1,56 @@
+root@freescale /Install-bz/bin$ matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <Alt>n=next
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <Alt>p=prev
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <Alt>c=close
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <Alt>d=desktop
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <Alt>m=!matchbox-remote -mbmenu
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <ctrl><alt>x=!xterm
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <ctrl><alt>r=!rxvt
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <ctrl><alt>e=!!gpe-calender
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <alt>Tab=next
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <alt><shift>Tab=prev
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <alt>space=taskmenu
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <alt>escape=!matchbox-remote -mbmenu
+
+matchbox: keyboard does not appear to have a <alt> key.
+matchbox: ignoring key shortcut <alt>f4=close
+
+matchbox: Cant find a keycode for keysym 65480
+matchbox: ignoring key shortcut f11=fullscreen
+
+
+Failed to get root pixmap id
+matchbox-desktop: loading /usr/lib/matchbox/desktop/tasks.so with args ( None )
+matchbox-desktop: loading /usr/lib/matchbox/desktop/dotdesktop.so with args ( None )
+user_overides is (nil)
+mb-desktop-dotdesktop: failed to open /usr/local/share/applications
+mb-desktop-dotdesktop: failed to open //.applications
+mb-applet-menu-launcher: bonobo-browser.desktop has no icon, png or name
+mb-applet-menu-launcher: failed to open /usr/local/share/applications
+mb-applet-menu-launcher: failed to open //.applications
+mb-applet-menu-launcher: bonobo-browser.desktop has no icon, png or name
+mb-applet-menu-launcher: failed to open /usr/local/share/applications
+mb-applet-menu-launcher: failed to open //.applications
+

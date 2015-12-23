@@ -1,0 +1,67 @@
+WPA_SUPPLICANT
+
+/////////////////////////WPA2-PSK//////////////////////
+wpa_supplicant.conf
+
+		ctrl_interface=/var/run/wpa_supplicant
+		ctrl_interface_group=wheel
+			network={
+			        ssid="AD"
+			        scan_ssid=1
+				proto=RSN
+			        key_mgmt=WPA-PSK
+			        psk="12345678"
+				}
+
+
+//////////////////////////////////////////////////////////
+
+
+/////////////////////////WPA-PSK//////////////////////////
+wpa_supplicant.conf
+
+		ctrl_interface=/var/run/wpa_supplicant
+		ctrl_interface_group=wheel
+			network={
+			        ssid="AD"
+			        scan_ssid=1
+			        key_mgmt=WPA-PSK
+			        psk="12345678"
+				}
+
+
+///////////////////////////////////////////////////////////
+
+/////////////////////////OPEN//////////////////////////////
+wpa_supplicant.conf
+
+		ctrl_interface=/var/run/wpa_supplicant
+		ctrl_interface_group=wheel
+			network={
+			        ssid="AD"
+			        scan_ssid=1
+			        key_mgmt=NONE
+ 				}
+
+
+/////////////////////////////////////////////////////////
+
+killall wpa_supplicant
+
+wpa_supplicant -B -Dwext -imlan0 -c/etc/wpa_supplicant.conf
+
+	// wpa_supplicant -i wlan0 -D wext -c wpa_supplicant.conf -d
+
+
+Note:-
+1) Before connection check mlan0 (use iwconfig) No data in essid and Access point
+2) After connection essid and Access point(server MAC) assigned.
+
+Hints:-	
+	-B means run wpa_supplicant in the background.
+	-D specifies the wireless driver. wext is the generic driver.
+	-c specifies the path for the configuration file.
+
+Problem statement:-
+1) The device is connected to server,in server shows no device connected.
+

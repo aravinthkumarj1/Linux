@@ -1,0 +1,33 @@
+sudo umount /dev/sdb
+sudo fdisk /dev/sdb
+
+u       [switch the unit to sectors instead of cylinders]
+d       [repeat this until no partition is reported by the 'p' command ]
+n	[create a new partition]
+p	[create a primary partition]
+1	[the first partition]
+16384	[starting at offset sector #16384, i.e. 8MB, which leaves enough space for the kernel, the boot loader and its configuration data]
+<enter>	[using the default value will create a partition that spans to the last sector of the medium]
+w	[ this writes the partition table to the medium and fdisk exits]
+
+Re-insert the SD-card
+
+sudo mkfs.ext4 /dev/sdb1
+
+
+sudo dd if=u-boot.bin of=/dev/sdb bs=512 seek=2 skip=2 conv=fsync
+
+	sudo dd if=uImage of=/dev/sdb bs=512 seek=2048 conv=fsync
+
+ mkdir /home/manoj/mountpoint
+ sudo mount /dev/sdb1 /home/manoj/mountpoint
+
+ cd /home/manoj/rootfs
+ sudo cp -a * /home/manoj/mountpoint
+ sudo umount /home/manoj/mountpoint
+
+
+
+
+
+

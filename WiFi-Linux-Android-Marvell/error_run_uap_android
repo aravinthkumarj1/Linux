@@ -1,0 +1,30 @@
+root@evk_6sl:/system/xbin # ./uaputl bss_start                                 
+: No such device
+ ERR:MRVLPRIVCMD is not supported by uap0
+ERR:Command sending failed!
+ERR:Cannot get current bss status!
+
+/////////////////////////////////////////////////////
+
+root@evk_6sl:/system/xbin # ./uaputl sys_cfg_auth                            
+: No such device
+ERR:MRVLPRIVCMD is not supported by uap0
+ERR:Command sending failed!
+
+/////////////////////////////////////////////////////
+
+https://developer.ridgerun.com/wiki/index.php/Marvel_88W8686_SDIO_WiFi_Integration
+
+https://github.com/manakeri/android_kernel_samsung_xcover/blob/master/modules/sd8787/wlan_src/README_APP_BUILD
+
+///////////////////////////////////////////////////////
+
+root@evk_6sl:/system/bin # netcfg
+lo       UP                                   127.0.0.1/8   0x00000049 00:00:00:00:00:00
+eth0     UP                                     0.0.0.0/0   0x00001003 00:04:9f:02:c5:67
+uap0     DOWN                                   0.0.0.0/0   0x00001002 00:22:58:6e:b7:10
+root@evk_6sl:/system/bin # ./uaputl.exe bss_start                              
+File opening Error
+Parsing of domain configuration file failed
+ERR: Wrong system configuration!
+255|root@evk_6sl:/system/bin # 

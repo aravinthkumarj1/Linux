@@ -1,0 +1,13 @@
+# First untar the kernel source downloaded from kernel.org:
+# tar xvzf linux-[version].bz2
+#
+# cd to the base of the linux source tree:
+# cd linux-[version]
+#
+# Then untar the patches package inside linux that is provided in the release:
+# tar xvzf ../linux-[version]-[release].bz2
+#
+#
+# And run this script from the base of the linux source tree:
+# ./patches/patch-kernel.sh
+#

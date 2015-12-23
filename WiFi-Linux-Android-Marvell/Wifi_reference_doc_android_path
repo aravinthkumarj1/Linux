@@ -1,0 +1,33 @@
+LOCAL_PATH := $(my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := uaputl.exe
+LOCAL_SRC_FILES := uapcmd.c uaputl.c uaphostcmd.c
+LOCAL_MODULE_TAGS := optional
+
+CONFIG_DFS_TESTING_SUPPORT=y
+ifeq ($(CONFIG_DFS_TESTING_SUPPORT), y)
+LOCAL_CFLAGS += -DDFS_TESTING_SUPPORT
+endif
+
+CONFIG_WFD_SUPPORT=y
+ifeq ($(CONFIG_WFD_SUPPORT), y)
+LOCAL_CFLAGS += -DWFD_SUPPORT
+endif
+
+include $(BUILD_EXECUTABLE)
+
+
+//////////////////////////////////////////////////
+
+
+kernel_imx/Documentation/networking/mac80211_hwsim/hostapd.conf:interface=wlan0
+kernel_imx/Documentation/networking/mac80211_hwsim/README:# Run hostapd (AP) for wlan0
+kernel_imx/drivers/net/wireless/rtlwifi/rtl8821as/ifcfg-wlan0
+
+kernel_imx/drivers/staging/csr/netdev.c: *      Called when userland does "ifconfig wlan0 up".
+kernel_imx/drivers/staging/rtl8192u/r8192U_core.c:#define DRV_NAME "wlan0"
+kernel_imx/drivers/net/wireless/iwlwifi/mvm/debugfs.c:	 * netdev:wlan0 -> ../../../ieee80211/phy0/netdev:wlan0/iwlmvm/
+kernel_imx/drivers/net/wireless/iwlegacy/common.h: *	/sys/class/net/wlan0/device/debug_level
+kernel_imx/drivers/net/wireless/iwlegacy/4965-mac.c: * of this device driver (i.e. a new file in /sys/class/net/wlan0/device/)
+kernel_imx/drivers/net/wireless/iwlegacy/Kconfig:		/sys/class/net/wlan0/device/debug_level

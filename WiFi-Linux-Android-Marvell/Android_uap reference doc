@@ -1,0 +1,38 @@
+root@evk_6sl:/ # netcfg                                                        
+lo       UP                                   127.0.0.1/8   0x00000049 00:00:00:00:00:00
+eth0     UP                                     0.0.0.0/0   0x00001003 00:04:9f:02:c5:67
+wlan0    UP                                192.168.1.46/24  0x00001043 00:22:58:6e:b7:10
+root@evk_6sl:/ # wlan: Received disassociation request on wlan0
+
+root@evk_6sl:/ # netcfg                                                        
+lo       UP                                   127.0.0.1/8   0x00000049 00:00:00:00:00:00
+eth0     UP                                     0.0.0.0/0   0x00001003 00:04:9f:02:c5:67
+wlan0    UP                                     0.0.0.0/0   0x00001003 00:22:58:6e:b7:10
+root@evk_6sl:/ # netcfgSDIO: max_segs=1 max_seg_size=524288                    
+rx_work=0 cpu_num=1
+WLAN FW already running! Skip FW download
+WLAN FW is active
+fw_cap_info=0xb03, dev_cap_mask=0xffffffff
+
+lo       UP                                   127.0.0.1/8   0x00000049 00:00:00:00:00:00
+eth0     UP                                     0.0.0.0/0   0x00001003 00:04:9f:02:c5:67
+wlan0    DOWN                                   0.0.0.0/0   0x00001002 00:22:58:6e:b7:10
+root@evk_6sl:/ # IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+wlan: Starting AP
+wlan: AP started
+IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+Set AC=3, txop=47 cwmin=3, cwmax=7 aifs=1
+wlan: We don't support AP WMM parameter
+Set AC=2, txop=94 cwmin=7, cwmax=15 aifs=1
+wlan: We don't support AP WMM parameter                                                
+Set AC=0, txop=0 cwmin=15, cwmax=63 aifs=3                                             
+wlan: We don't support AP WMM parameter                                                
+Set AC=1, txop=0 cwmin=15, cwmax=1023 aifs=7                                           
+wlan: We don't support AP WMM parameter                                                
+
+root@evk_6sl:/ # netcfg                                                        
+lo       UP                                   127.0.0.1/8   0x00000049 00:00:00:00:00:00
+eth0     UP                                     0.0.0.0/0   0x00001003 00:04:9f:02:c5:67
+wlan0    UP                                192.168.43.1/24  0x00001043 00:22:58:6e:b7:10
+

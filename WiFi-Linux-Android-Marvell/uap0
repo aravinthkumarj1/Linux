@@ -1,0 +1,55 @@
+test conf
+iwpriv uap0 apcfg "ASCII_CMD=AP_CFG,SSID=TEST_uAP,SEC=open"
+./uaputl.exe bss_start
+
+iwpriv uap0 apcfg "ASCII_CMD=AP_CFG,SSID=TEST_uAP,SEC=WPA2-PSK,KEY=ecbe5facdbfe234a"
+
+
+
+///////////////////////////////////////////////////////////////
+
+./uaputl.exe bss_stop
+
+./uaputl.exe sys_cfg_11n 1 0x111e    // set STA_CHANNEL width 40Mhz
+./uaputl.exe bss_start
+
+
+//////////////////////////////////////////////////////////////
+./uaputl.exe sys_cfg_80211d state 1   // enable 80211d
+
+
+////////////////////////////////////////////////
+
+./uaputl.exe sys_cfg_rates 0x82 0x84 0x8b 0x96
+
+error:
+
+CMD_RESP: cmd 0xb1 error, result=0x1
+IOCTL failed: 9847e800 id=0x20000, sub_id=0x20001 action=1, status_code=0x1
+ERR:UAP_BSS_CTRL fail, result=0
+ERR:Could not start BSS!
+
+Solutions:-
+disale 802.11n
+
+/////////////////////////////////////////////////////
+
+802.11n -- 65Mbps
+
+802.11b 
+./uaputl.exe sys_cfg_rates 0x82 0x84 0x8b 0x96  -- 11Mbps
+
+802.11bg
+./uaputl.exe sys_cfg_11n 0     -- 54Mbps
+
+802.11an
+./uaputl.exe sys_cfg_rates 0x8C 0x12 0x98 0x24 0xB0 0x48 0x60 0x6c
+./uaputl.exe sys_cfg_channel 36
+
+////////////////////////////////////////////////////
+
+Error:
+ERR: Rates/Channel do not match!
+Solution:
+change the Channel
+
