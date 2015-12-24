@@ -1,0 +1,482 @@
+U-Boot 2014.04-08637-gaffa032 (Oct 12 2015 - 10:16:00)
+
+CPU:   Freescale i.MX6SL rev1.0 at 396 MHz
+CPU:   Temperature 23 C, calibration data: 0x5e35715f
+Reset cause: POR
+Board: MX6SLEVK
+I2C:   ready
+DRAM:  1 GiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Found PFUZE100 deviceid=10,revid=11
+Detecting VOL_DOWN+POWER key for recovery(0:0) ...
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+flash target is MMC:1
+Net:   FEC [PRIME]
+Normal Boot
+Hit any key to stop autoboot:  0 
+=> pri
+baudrate=115200
+bootcmd=booti mmc1
+bootdelay=3
+ethact=FEC
+ethaddr=00:04:9f:02:c5:67
+ethprime=FEC
+fastboot_dev=mmc1
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+loadaddr=0x80800000
+splashpos=m,m
+stderr=serial
+stdin=serial
+stdout=serial
+
+Environment size: 262/8188 bytes
+=> boot
+booti mmc1 
+kernel   @ 80808000 (6879840)
+ramdisk  @ 81800000 (496854)
+fdt      @ 81700000 (35437)
+kernel cmdline:
+        use boot.img command line:
+        console=ttymxc0,115200 init=/init androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale androidboot.serialno=39241d
+switch to ldo_bypass mode!
+   Using Device Tree in place at 81700000, end 8170ba6c
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Initializing cgroup subsys cpu
+Initializing cgroup subsys cpuacct
+Linux version 3.10.53-88098-g1c3a910-dirty (manoj@manoj) (gcc version 4.6.x-google 20120106 (prerelease) (GCC) ) #9 SMP PREEMPT Thu Nov 5 12:35
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: Freescale i.MX6 SoloLite (Device Tree), model: Freescale i.MX6 SoloLite EVK Board(PFUZE100)
+cma: CMA: reserved 256 MiB at aa000000
+Memory policy: ECC disabled, Data cache writealloc
+PERCPU: Embedded 8 pages/cpu @8208d000 s9728 r8192 d14848 u32768
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 259840
+Kernel command line: console=ttymxc0,115200 init=/init androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale androidboot.sd
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 959MB 64MB = 1023MB total
+Memory: 758852k/758852k available, 289724k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0xc0800000 - 0xff000000   (1000 MB)
+    lowmem  : 0x80000000 - 0xc0000000   (1024 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80e94b50   (14899 kB)
+      .init : 0x80e95000 - 0x80eea600   ( 342 kB)
+      .data : 0x80eec000 - 0x80f70540   ( 530 kB)
+       .bss : 0x80f70540 - 0x81005244   ( 596 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+        RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+NR_IRQS:16 nr_irqs:16 16
+L310 cache controller enabled
+l2x0: 16 ways, CACHE_ID 0x410000c8, AUX_CTRL 0x32030000, Cache size: 262144 B
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+Console: colour dummy device 80x30
+Calibrating delay loop... 789.70 BogoMIPS (lpj=3948544)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 512
+Initializing cgroup subsys debug
+Initializing cgroup subsys freezer
+CPU: Testing write buffer coherency: ok
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x807f2d80 - 0x807f2dd8
+Brought up 1 CPUs
+SMP: Total of 1 processors activated (789.70 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+pinctrl core: initialized pinctrl subsystem
+regulator-dummy: no parameters
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+Use WDOG1 as reset source
+syscon 20c8000.anatop: regmap [mem 0x020c8000-0x020c8fff] registered
+vdd1p1: 800 <--> 1375 mV at 1125 mV 
+vdd3p0: 2800 <--> 3150 mV at 3000 mV 
+vdd2p5: 2100 <--> 2850 mV at 2525 mV 
+cpu: 725 <--> 1450 mV 
+vddpu: 725 <--> 1450 mV 
+vddsoc: 725 <--> 1450 mV 
+syscon 20e0000.iomuxc-gpr: regmap [mem 0x020e0000-0x020e0037] registered
+syscon 21bc000.ocotp-ctrl: regmap [mem 0x021bc000-0x021bffff] registered
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6sl-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+bio: create slab <bio-0> at 0
+lcd-3v3: no parameters
+wm8962-supply-3v15: 3150 mV 
+wm8962-supply-4v2: 4325 mV 
+usb_otg1_vbus: 5000 mV 
+usb_otg2_vbus: 5000 mV 
+i2c-core: driver [max17135] using legacy suspend method
+i2c-core: driver [max17135] using legacy resume method
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+i2c i2c-0: Max17135 PMIC not found!
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-2: IMX I2C adapter registered
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+MIPI CSI2 driver module loaded
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.16
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+cfg80211: Calling CRDA to update world regulatory domain
+pureg-dummy: no parameters
+Switching to clocksource mxc_timer1
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP: reno registered
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 484K (81800000 - 81879000)
+hw perfevents: enabled with ARMv7 Cortex-A9 PMU driver, 7 counters available
+ldo2p5-dummy: no parameters
+Bus freq driver module loaded
+console [pstore-1] enabled
+ramoops: attached 0x100000@0xbbf00000, ecc: 0/0
+mxc_ramoops device success loaded
+futex hash table entries: 256 (order: 2, 16384 bytes)
+audit: initializing netlink socket (disabled)
+type=2000 audit(0.350:1): initialized
+VFS: Disk quotas dquot_6.5.2
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+NTFS driver 2.1.30 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) �© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.22)
+msgmni has been set to 1995
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+MIPI DSI driver module loaded
+sii902x 1-0039: Sii902x: cound not find device
+mxsfb 20f8000.lcdif: failed to find mxc display driver 
+Console: switching to colour frame buffer device 100x30
+mxsfb 20f8000.lcdif: initialized
+imx-sdma 20ec000.sdma: loaded firmware 1.1
+imx-sdma 20ec000.sdma: initialized
+pfuze100-regulator 0-0008: Full lay: 1, Metal lay: 1
+pfuze100-regulator 0-0008: FAB: 0, FIN: 0
+pfuze100-regulator 0-0008: pfuze100 found.
+SW1AB: 300 <--> 1875 mV at 975 mV 
+SW1C: 300 <--> 1875 mV at 1175 mV 
+SW2: 800 <--> 3300 mV at 3150 mV 
+SW3A: 400 <--> 1975 mV at 1200 mV 
+SW3B: 400 <--> 1975 mV at 1200 mV 
+SW4: 800 <--> 1975 mV at 1800 mV 
+SWBST: 5000 <--> 5150 mV at 5000 mV 
+VSNVS: 1000 <--> 3000 mV at 3000 mV 
+VREFDDR: 750 mV 
+VGEN1: 800 <--> 1550 mV at 1200 mV 
+VGEN2: 800 <--> 1550 mV at 800 mV 
+VGEN3: 1800 <--> 3300 mV at 1800 mV 
+VGEN4: 1800 <--> 3300 mV at 1800 mV 
+VGEN5: 1800 <--> 3300 mV at 2500 mV 
+VGEN6: 1800 <--> 3300 mV at 1800 mV 
+Serial: IMX driver
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 58) is a IMX
+console [ttymxc0] enabled
+serial: Freescale lpuart driver
+imx sema4 driver is registered.
+[drm] Initialized drm 1.1.0 20060810
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+m25p80 spi32766.0: m25p32 (4096 Kbytes)
+spi_imx 2008000.ecspi: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+libphy: fec_enet_mii_bus: probed
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 3.10.53-88098-g1c3a910-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+input: 20b8000.kpp as /devices/soc0/soc.2/2000000.aips-bus/20b8000.kpp/input/input0
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+usbcore: registered new interface driver wacom
+elan-touch 0-0010: elan - Read Hello Packet Failed
+elan-touch: probe of 0-0010 failed with error -22
+mma8450 0-001c: read chip ID 0xfffffffb is not equal to 0xc6!
+mma8450: probe of 0-001c failed with error -22
+i2c-core: driver [isl29023] using legacy suspend method
+i2c-core: driver [isl29023] using legacy resume method
+snvs_rtc 20cc034.snvs-rtc-lp: rtc core: registered 20cc034.snvs-rtc-lp as rtc0
+i2c /dev entries driver
+ov5640 2-003c: cannot get io voltage
+usb 1-1: new low-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640 is not found
+ov5642_power_on: cannot get io voltage error
+ov5642_read_reg:write reg error:reg=300a
+camera ov5642 is not found
+pxp-v4l2 pxp_v4l2_out.24: initialized
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+gspca_main: v2.14.0 registered
+usb 1-1: New USB device found, idVendor=04ca, idProduct=0061
+usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1: Product: USB Optical Mouse
+imx2-wdt 20bc000.wdog: IMX2+ Watchdog Timer enabled. timeout=60s (nowayout=0)
+device-mapper: uevent: version 1.0.3
+usb 1-1: Manufacturer: PixArt
+device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+Bluetooth: Virtual HCI driver ver 1.3
+Bluetooth: HCI UART driver ver 2.2
+Bluetooth: HCIATH3K protocol initialized
+usbcore: registered new interface driver btusb
+cpuidle: using governor ladder
+cpuidle: using governor menu
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+mmc0: no vqmmc regulator found
+mmc0: no vmmc regulator found
+mmc0: SDHCI controller on 2190000.usdhc [2190000.usdhc] using DMA
+mmc1: no vqmmc regulator found
+mmc1: no vmmc regulator found
+mmc1: SDHCI controller on 2194000.usdhc [2194000.usdhc] using DMA
+mmc2: no vqmmc regulator found
+mmc2: no vmmc regulator found
+mmc2: SDHCI controller on 2198000.usdhc [2198000.usdhc] using DMA
+galcore: clk_get gpu3d_clk failed, disable 3d!
+Galcore version 5.0.11.25762
+mmc1: new high speed SDHC card at address e624
+mmcblk1: mmc1:e624 SU04G 3.69 GiB 
+ mmcblk1: p1 p2 p3 < p5 p6 p7 p8 > p4
+mmcblk1: p4 size 5567104 extends beyond EOD, truncated
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt USB Optical Mouse as /devices/soc0/soc.2/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1:1.0/input/input1
+hid-generic 0003:04CA:0061.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt USB Optical Mouse] on usb-ci_hdrc.1-1/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+logger: created 256K log 'log_main'
+logger: created 256K log 'log_events'
+logger: created 256K log 'log_radio'
+logger: created 256K log 'log_system'
+usbcore: registered new interface driver snd-usb-audio
+wm8962 1-001a: customer id 0 revision D
+input: WM8962 Beep Generator as /devices/soc0/soc.2/2100000.aips-bus/21a4000.i2c/i2c-1/1-001a/input/input2
+imx-wm8962 sound.25:  wm8962 <-> 202c000.ssi mapping ok
+imx-spdif sound-spdif.26:  dit-hifi <-> 2004000.spdif mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (15960 buckets, 63840 max)
+ctnetlink v0.93: registering with nfnetlink.
+NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: (C) 2002 David S. Miller
+TCP: cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20120528 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+lib80211: common routines for IEEE802.11 drivers
+Key type dns_resolver registered
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+SWBST: disabling
+SW4: disabling
+usb_otg1_vbus: disabling
+wm8962-supply-4v2: disabling
+wm8962-supply-3v15: disabling
+regulator-dummy: disabling
+imx mcc test is registered.
+file system registered
+android_usb gadget: Mass Storage Function, version: 2009/09/11
+android_usb gadget: Number of LUNs=1
+ lun0: LUN: removable file: (no medium)
+android_usb gadget: android_usb ready
+snvs_rtc 20cc034.snvs-rtc-lp: setting system clock to 1970-01-01 00:00:01 UTC (1)
+ALSA device list:
+  #0: wm8962-audio
+  #1: imx-spdif
+Freeing unused kernel memory: 340K (80e95000 - 80eea000)
+SELinux:  Permission attach_queue in class tun_socket not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+type=1403 audit(1.660:2): policy loaded auid=4294967295 ses=4294967295
+SELinux: Loaded policy from /sepolicy
+type=1404 audit(1.670:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+init: /init.freescale.rc: 111: ignored duplicate definition of service 'p2p_supplicant'
+init (1): /proc/1/oom_adj is deprecated, please use /proc/1/oom_score_adj instead.
+init: /dev/hw_random not found
+keychord: using input dev 20b8000.kpp for fevent
+init: cannot open '/initlogo.rle'
+Console: switching to colour dummy device 80x30
+EXT4-fs (mmcblk1p5): mounted filesystem with ordered data mode. Opts: (null)
+EXT4-fs (mmcblk1p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk1p4): recovery complete
+EXT4-fs (mmcblk1p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk1p6): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk1p6): recovery complete
+EXT4-fs (mmcblk1p6): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk1p7): mounted filesystem with ordered data mode. Opts: (null)
+init: /dev/hw_random not found
+init: cannot find '/system/etc/install-recovery.sh', disabling 'flash_recovery'
+type=1400 audit(4.410:4): avc:  denied  { entrypoint } for  pid=114 comm="init" path="/sbin/healthd" dev="rootfs" ino=229 scontext=u:r:healthd1
+init: using deprecated syntax for specifying property 'ro.serialno', use ${name} instead
+healthd: BatteryTemperaturePath not found
+healthd: BatteryTechnologyPath not found
+init: using deprecated syntax for specifying property 'ro.product.manufacturer', use ${name} instead
+binder: 114:114 transaction failed 29189, size 0-0
+init: using deprecated syntax for specifying property 'ro.product.model', use ${name} instead
+init: property 'sys.powerctl' doesn't exist while expanding '${sys.powerctl}'
+init: powerctl: cannot expand '${sys.powerctl}'
+init: property 'sys.sysctl.extra_free_kbytes' doesn't exist while expanding '${sys.sysctl.extra_free_kbytes}'
+init: cannot expand '${sys.sysctl.extra_free_kbytes}' while writing to '/proc/sys/vm/extra_free_kbytes'
+android_usb: already disabled
+mtp_bind_config
+root@evk_6sl:/ # csi_v4l_open: Internal error, camera is not found!
+csi_v4l_open: Internal error, camera is not found!
+warning: `zygote' uses 32-bies (legacy support in use)
+
+root@evk_6sl:/ # request_suspend_state: wakeup (3->0) at 21960757292 (1970-01-02 00:00:04.581392167 UTC)
+lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+lowmemorykiller: oom_adj 0 => oom_score_adj 0
+lowmemorykiller: oom_adj 1 => oom_score_adj 58
+lowmemorykiller: oom_adj 2 => oom_score_adj 117
+lowmemorykiller: oom_adj 3 => oom_score_adj 176
+lowmemorykiller: oom_adj 9 => oom_score_adj 529
+lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+fec 2188000.ethernet eth0: Freescale FEC PHY driver [Generic PHY] (mii_bus:phy_addr=2188000.ethernet:00, irq=-1)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+acc_open
+acc_release
+wlan: Loading MWLAN driver
+wlan: Driver loaded successfully
+type=1400 audit(86405.800:5): avc:  denied  { module_request } for  pid=405 comm="netd" kmod="netdev-wlan0" scontext=u:r:netd:s0 tcontext=u:r:0
+type=1400 audit(86405.830:6): avc:  denied  { sys_module } for  pid=405 comm="netd" capability=16  scontext=u:r:netd:s0 tcontext=u:r:netd:s0 t0
+type=1400 audit(86405.850:7): avc:  denied  { module_request } for  pid=405 comm="netd" kmod="netdev-wlan0" scontext=u:r:netd:s0 tcontext=u:r:0
+type=1400 audit(86405.870:8): avc:  denied  { sys_module } for  pid=405 comm="netd" capability=16  scontext=u:r:netd:s0 tcontext=u:r:netd:s0 t0
+type=1400 audit(86405.890:9): avc:  denied  { module_request } for  pid=405 comm="netd" kmod="netdev-wlan0" scontext=u:r:netd:s0 tcontext=u:r:0
+type=1400 audit(86405.920:10): avc:  denied  { sys_module } for  pid=405 comm="netd" capability=16  scontext=u:r:netd:s0 tcontext=u:r:netd:s0 0
+type=1400 audit(86405.960:11): avc:  denied  { module_request } for  pid=405 comm="netd" kmod="netdev-wlan0" scontext=u:r:netd:s0 tcontext=u:r0
+type=1400 audit(86405.990:12): avc:  denied  { sys_module } for  pid=405 comm="netd" capability=16  scontext=u:r:netd:s0 tcontext=u:r:netd:s0 0
+type=1400 audit(86406.020:13): avc:  denied  { module_request } for  pid=405 comm="netd" kmod="netdev-wlan0" scontext=u:r:netd:s0 tcontext=u:r0
+
+root@evk_6sl:/ # cd /
+root@evk_6sl:/ # ls
+acct
+cache
+charger
+config
+d
+data
+default.prop
+dev
+device
+etc
+file_contexts
+fstab.freescale
+init
+init.environ.rc
+init.freescale.rc
+init.freescale.usb.rc
+init.rc
+init.trace.rc
+init.usb.rc
+mnt
+proc
+property_contexts
+res
+root
+sbin
+sdcard
+seapp_contexts
+sepolicy
+storage
+sys
+system
+ueventd.freescale.rc
+ueventd.rc
+vendor
+root@evk_6sl:/ # init: sys_prop: permission denied uid:1003  name:service.bootanim.exit
+
+root@evk_6sl:/ # 
+root@evk_6sl:/ #
